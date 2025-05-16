@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Portafolio Personal - Desarrollador</title>
+<style>
+  /* Reset & base */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ffeeff 0%, #e0c3fc 100%);
+    color: #333;
+    scroll-behavior: smooth;
+  }
+  /* Header */
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #7b2ff7;
+    background: linear-gradient(60deg, #7b2ff7 0%, #f107a3 100%);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    z-index: 1000;
+  }
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  nav .logo {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 2px;
+    user-select: none;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.8rem;
+  }
+  nav ul li a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  nav ul li a:hover,
+  nav ul li a:focus {
+    background-color: #fff;
+    color: #f107a3;
+    outline: none;
+  }
+  /* Main container with padding-top for fixed header */
+  main {
+    padding-top: 80px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  section {
+    padding: 4rem 2rem;
+    border-radius: 15px;
+    margin: 3rem 0;
+    box-shadow: 0 0 15px rgba(123, 47, 247, 0.15);
+    background: #fff;
+  }
+  /* Section heading styles */
+  h2 {
+    font-size: 2.5rem;
+    color: #7b2ff7;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  /* Inicio section */
+  #inicio {
+    background: linear-gradient(45deg, #f107a3, #7b2ff7);
+    color: white;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(241,7,163,0.5);
+  }
+  #inicio h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  }
+  #inicio p {
+    font-size: 1.3rem;
+    max-width: 600px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+  }
+  /* Proyectos */
+  #proyectos ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    gap: 1.5rem;
+  }
+  #proyectos li {
+    background: #e0c3fc;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 0 15px #7b2ff7aa;
+    transition: transform 0.3s ease;
+  }
+  #proyectos li:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px #f107a3cc;
+  }
+  #proyectos li h3 {
+    margin-bottom: 0.8rem;
+    color: #5e02a0;
+  }
+  #proyectos li p {
+    color: #3b0055;
+  }
+  /* Experiencia sections: split details */
+  .experience-list {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+  .experience-item {
+    background: #f7eaff;
+    border-left: 8px solid #f107a3;
+    padding: 1rem 1.2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 12px #f107a366;
+  }
+  .experience-item h4 {
+    color: #a1007f;
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+  }
+  .experience-item span {
+    font-weight: 600;
+    color: #7b2ff7;
+    font-size: 0.95rem;
+  }
+  .experience-item p {
+    margin-top: 0.5rem;
+    color: #4b0182;
+    line-height: 1.3;
+  }
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background: #7b2ff7;
+    color: #fff;
+    font-weight: 600;
+    user-select: none;
+  }
+  /* Responsive tweaks */
+  @media (max-width: 600px) {
+    nav ul {
+      gap: 1rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    #inicio h1 {
+      font-size: 2.3rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <nav>
+    <div class="logo">Mi Portafolio</div>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#experiencia-academica">Experiencia Académica</a></li>
+      <li><a href="#experiencia-personal">Experiencia Personal</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="inicio">
+    <h1>Hola, soy [Tu Nombre]</h1>
+    <p>Desarrollador apasionado creando soluciones web modernas, funcionales y visualmente atractivas.</p>
+  </section>
+
+  <section id="proyectos">
+    <h2>Proyectos Destacados</h2>
+    <ul>
+      <li>
+        <h3>Proyecto Uno</h3>
+        <p>Aplicación web para gestión de tareas con funcionalidades colaborativas y en tiempo real.</p>
+      </li>
+      <li>
+        <h3>Proyecto Dos</h3>
+        <p>Portfolio interactivo con animaciones personalizadas y diseño responsivo.</p>
+      </li>
+      <li>
+        <h3>Proyecto Tres</h3>
+        <p>API RESTful para ecommerce con integración de pagos y autenticación segura.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="experiencia-academica">
+    <h2>Experiencia Académica</h2>
+    <div class="experience-list">
+      <div class="experience-item">
+        <h4>Licenciatura en Ingeniería de Sistemas</h4>
+        <span>Universidad XYZ | 2017 - 2022</span>
+        <p>Fundamentos sólidos en programación, análisis de sistemas, bases de datos y desarrollo de software.</p>
+      </div>
+      <div class="experience-item">
+        <h4>Curso Avanzado de Desarrollo Web</h4>
+        <span>Plataforma ABC | 2021</span>
+        <p>Formación en tecnologías modernas como React, Node.js y metodologías ágiles.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experiencia-personal">
+    <h2>Experiencia Personal</h2>
+    <div class="experience-list">
+      <div class="experience-item">
+        <h4>Desarrollador Freelance</h4>
+        <span>2020 - Presente</span>
+        <p>Desarrollo de sitios web y aplicaciones para clientes, enfocado en calidad y experiencia usuario.</p>
+      </div>
+      <div class="experience-item">
+        <h4>Prácticas Profesionales en Empresa Tech</h4>
+        <span>2021</span>
+        <p>Colaboración en proyectos reales, implementando nuevas funcionalidades y optimizando rendimiento.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  &copy; 2024 - [Tu Nombre]. Todos los derechos reservados.
+</footer>
+</body>
+</html>
+
